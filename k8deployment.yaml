@@ -15,14 +15,14 @@ spec:
     spec:
       containers:
       - name: catalog
-        image: mswsaksdocker/akslinuximages:catalog
+        image: 
         env:
         - name: GET_HOSTS_FROM
           value: dns
         - name: CatalogConnectionString
-          value: Server=tcp:v1-activateazure.database.windows.net,1433;Initial Catalog=ActivateAzure.Catalog;Persist Security Info=False;User ID=v1sqllogin;Password=v1pass@word1$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30
+          value: 
         - name: ServiceBusPublisherConnectionString
-          value: Endpoint=sb://v1-activateazure.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Mxoy8cxyT8fgn70WfurS6SMKZifYyW45iMNiZgs6NfE=;EntityPath=eventbustopic
+          value: 
         ports:
         - containerPort: 80
 ---
@@ -43,18 +43,18 @@ spec:
     spec:
       containers:
       - name: basket
-        image: mswsaksdocker/akslinuximages:basket
+        image: 
         env:
         - name: GET_HOSTS_FROM
           value: dns
         - name: StorageAccount
-          value: v1activateazure
+          value: 
         - name: StorageKey
-          value: 11qfAegYObO96XRUir1mNpMLndoig54UTnLsEDpQ6875B8K15S2LpPfAymTaTZrR3brvB1M5Lv2AhrW7JBYZYw==
+          value: 
         - name: catalog
           value: http://catalog
         - name: ServiceBusPublisherConnectionString
-          value: Endpoint=sb://v1-activateazure.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Mxoy8cxyT8fgn70WfurS6SMKZifYyW45iMNiZgs6NfE=;EntityPath=eventbustopic
+          value: 
         ports:
         - containerPort: 80
 ---
@@ -75,7 +75,7 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: mswsaksdocker/akslinuximages:gateway
+        image: 
         env:
         - name: GET_HOSTS_FROM
           value: dns
@@ -105,16 +105,16 @@ spec:
     spec:
       containers:
       - name: ordering
-        image: mswsaksdocker/akslinuximages:ordering
+        image: 
         env:
         - name: GET_HOSTS_FROM
           value: dns
         - name: CosmosEndpoint
-          value: https://v1-activateazure.documents.azure.com:443
+          value: 
         - name: CosmosPrimaryKey
-          value: xriBp7cJpJNIr4dX9JQ3JXjHL9vMssNlW8uszIArnMA959UPpXfAcdfXZVOlprjLXdOwJkHrRHu9IE5X2sCIFA==
+          value: 
         - name: ServiceBusPublisherConnectionString
-          value: Endpoint=sb://v1-activateazure.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Mxoy8cxyT8fgn70WfurS6SMKZifYyW45iMNiZgs6NfE=;EntityPath=eventbustopic
+          value: 
         ports:
         - containerPort: 80
 ---
@@ -135,7 +135,7 @@ spec:
     spec:
       containers:
       - name: ui
-        image: mswsaksdocker/akslinuximages:musicstore
+        image: 
         env:
         - name: GET_HOSTS_FROM
           value: dns
